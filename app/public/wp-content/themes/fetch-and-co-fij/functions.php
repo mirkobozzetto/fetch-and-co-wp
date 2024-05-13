@@ -21,8 +21,6 @@ function register_my_menu()
 {
     register_nav_menus(array(
         'topfr' => 'Menu fr',
-        'topnl' => 'Menu nl',
-        'topen' => 'Menu en',
     ));
 }
 add_action('init', 'register_my_menu');

@@ -11,7 +11,7 @@
   <body class="bg-neutral-700">
     <!-- navigation -->
     <div class="flex justify-center p-2 space-x-4">
-      <a class="text-white hover:text-blue-400" href="#">Home</a>
+      <!-- <a class="text-white hover:text-blue-400" href="#">Home</a>
       <span class="text-white">|</span>
       <a class="text-white hover:text-blue-400" href="#">Articles</a>
       <span class="text-white">|</span>
@@ -20,7 +20,28 @@
       <a class="text-white hover:text-blue-400" href="#">Map</a>
       <span class="text-white">|</span>
       <a class="text-white hover:text-blue-400" href="#">XML</a>
-      <span class="text-white">|</span>
+      <span class="text-white">|</span> -->
+<?php
+function print_custom_menu()
+{
+    $nomMenu       = "topfr";
+    $menuLocations = get_nav_menu_locations();
+    $menuID        = $menuLocations[$nomMenu];
+    $primaryNav    = wp_get_nav_menu_items($menuID);
+
+    foreach ($primaryNav as $navItem) {
+        echo '<a class="text-white hover:text-blue-400" href="' .
+        $navItem->url . '" title="' .
+        $navItem->title . '">' . $navItem->title . '</a>';
+        echo '<span class="text-white">|</span>';
+    }
+}
+
+// Dans votre HTML, remplacez simplement le code du menu par :
+print_custom_menu();
+?>
+
+    <!-- </div> -->
       <!-- recherche -->
       <form>
         <input class="bg-white bg-opacity-50 text-white/90 w-28 focus:outline-none focus:ring-0" type="text">
