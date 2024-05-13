@@ -1,0 +1,1 @@
+[13-May-2024 08:28:24 UTC] PHP Warning:  Attempt to read property "title" on null in /Users/bozzettomirko/Local Sites/fetch-and-cowp/app/public/wp-includes/class-wp-customize-widgets.php on line 905
