@@ -15,7 +15,28 @@ add_action('init', 'register_my_menu');
 
 devra être présent dans le fichier `functions.php`
 
-et il faudra définir ce code défini par défaut afin de faire fonctionner correctement la redirection de pages dans ce même menu
+et il faudra définir ce code défini par défaut afin de faire fonctionner correctement la redirection de pages dans ce même menu,
+du coup ici j'ai défini ce bloc de code dans mon header afin d'afficher correctement mon menu avec mes styles Tailwind
+
+```php
+<?php
+function print_custom_menu()
+{
+    $nomMenu       = "topfr";
+    $menuLocations = get_nav_menu_locations();
+    $menuID        = $menuLocations[$nomMenu];
+    $primaryNav    = wp_get_nav_menu_items($menuID);
+
+    foreach ($primaryNav as $navItem) {
+        echo '<a class="text-white hover:text-blue-400" href="' .
+        $navItem->url . '" title="' .
+        $navItem->title . '">' . $navItem->title . '</a>';
+        echo '<span class="text-white">|</span>';
+    }
+}
+print_custom_menu();
+?>
+```
 
 ## Liens utiles:
 
