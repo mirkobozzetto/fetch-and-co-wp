@@ -15,8 +15,7 @@ add_action('init', 'register_my_menu');
 
 devra être présent dans le fichier `functions.php`
 
-et il faudra définir ce code défini par défaut afin de faire fonctionner correctement la redirection de pages dans ce même menu,
-du coup ici j'ai défini ce bloc de code dans mon header afin d'afficher correctement mon menu avec mes styles Tailwind
+et il faudra définir ce code défini par défaut afin de faire fonctionner correctement la redirection de pages dans ce même menu, du coup ici j'ai défini ce bloc de code dans mon header afin d'afficher correctement mon menu avec mes styles Tailwind
 
 ```php
 <?php
