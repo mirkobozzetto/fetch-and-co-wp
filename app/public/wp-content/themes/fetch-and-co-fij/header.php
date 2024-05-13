@@ -11,16 +11,6 @@
   <body class="bg-neutral-700">
     <!-- navigation -->
     <div class="flex justify-center p-2 space-x-4">
-      <!-- <a class="text-white hover:text-blue-400" href="#">Home</a>
-      <span class="text-white">|</span>
-      <a class="text-white hover:text-blue-400" href="#">Articles</a>
-      <span class="text-white">|</span>
-      <a class="text-white hover:text-blue-400" href="#">Movies</a>
-      <span class="text-white">|</span>
-      <a class="text-white hover:text-blue-400" href="#">Map</a>
-      <span class="text-white">|</span>
-      <a class="text-white hover:text-blue-400" href="#">XML</a>
-      <span class="text-white">|</span> -->
 <?php
 function print_custom_menu()
 {
@@ -36,12 +26,8 @@ function print_custom_menu()
         echo '<span class="text-white">|</span>';
     }
 }
-
-// Dans votre HTML, remplacez simplement le code du menu par :
 print_custom_menu();
 ?>
-
-    <!-- </div> -->
       <!-- recherche -->
       <form>
         <input class="bg-white bg-opacity-50 text-white/90 w-28 focus:outline-none focus:ring-0" type="text">
