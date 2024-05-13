@@ -1,4 +1,4 @@
-# Prépa des exos pour xles cours du FIJ
+# FIJ Project
 
 ## Menu
 
