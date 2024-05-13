@@ -1,0 +1,13 @@
+Prépa des exos pour les cours du FIJ
+
+Wordpress
+https://www.evernote.com/shard/s482/client/snv?isnewsnv=true&noteGuid=4c9085b2-1129-4c65-8c41-e8fa810b5245&noteKey=7826997b1b1e8a95&sn=https%3A%2F%2Fwww.evernote.com%2Fshard%2Fs482%2Fsh%2F4c9085b2-1129-4c65-8c41-e8fa810b5245%2F7826997b1b1e8a95&title=Wordpress%2Bshare
+
+functions.php
+https://www.evernote.com/shard/s482/client/snv?isnewsnv=true&noteGuid=28c944e8-4f18-4d7f-b9e1-926f86744120&noteKey=c69455fb604605cd&sn=https%3A%2F%2Fwww.evernote.com%2Fshard%2Fs482%2Fsh%2F28c944e8-4f18-4d7f-b9e1-926f86744120%2Fc69455fb604605cd&title=functions.php%2Bshare
+
+PHP
+https://www.evernote.com/shard/s482/client/snv?isnewsnv=true&noteGuid=49f7fec5-9c3d-460b-983b-2082277572bd&noteKey=ee3223872b53eeba&sn=https%3A%2F%2Fwww.evernote.com%2Fshard%2Fs482%2Fsh%2F49f7fec5-9c3d-460b-983b-2082277572bd%2Fee3223872b53eeba&title=PHP%2B-%2Bshare
+
+ACF
+https://www.evernote.com/shard/s482/client/snv?isnewsnv=true&noteGuid=fe2f1e82-0479-4ad3-b84f-bacf21214d14&noteKey=b0204c21e64bd1d3&sn=https%3A%2F%2Fwww.evernote.com%2Fshard%2Fs482%2Fsh%2Ffe2f1e82-0479-4ad3-b84f-bacf21214d14%2Fb0204c21e64bd1d3&title=ACF%2Bshare
