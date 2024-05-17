@@ -28,8 +28,6 @@ function mes_js()
 }
 add_action('wp_enqueue_scripts', 'mes_js');
 
-// //tailles de thubnails; // add_image_size('big', 1920, 5000, false);; // add_image_size('galery', 300, 300, true);
-
 function var_dumpj($d, $e = null)
 {
     echo '<pre><code>';

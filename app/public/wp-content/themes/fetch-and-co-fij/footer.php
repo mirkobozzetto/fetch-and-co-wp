@@ -16,8 +16,8 @@
   <span>NE (50°)</span>
   <span>(3.1 km/h)</span>
 </footer>
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/src/jQuery 3.7.1 min.js"></script>
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/src/main.js"></script>
+<!-- <script src="<?php echo get_stylesheet_directory_uri(); ?>/src/jQuery 3.7.1 min.js"></script> -->
+<!-- <script src="<?php echo get_stylesheet_directory_uri(); ?>/src/main.js"></script> -->
 <!-- end footer -->
 </body>
 <?php wp_footer(); ?>
