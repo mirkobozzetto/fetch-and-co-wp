@@ -42,6 +42,22 @@ function loadAjaxPhp() {
   charge.send();
 }
 
+function loadAjaxJQ() {
+  // $('#titre').load(chemin+"/data.php");
+  $.post(
+    mainParams.chemin + "/data.php",
+    {
+      prenom: "Will",
+      nom: "Smith",
+    },
+    function (data, status) {
+      var infos = JSON.parse(data);
+      console.log(infos);
+      // document.getElementById("titre").innerHTML = data;
+    }
+  );
+}
+
 $(document).ready(() => {
   // loadAjaxTxt();
   // loadAjaxJson();

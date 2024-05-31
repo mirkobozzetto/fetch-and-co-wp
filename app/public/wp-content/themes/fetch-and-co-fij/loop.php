@@ -17,7 +17,7 @@
       Ajax php!
     </button>
 
-    <button class="px-4 py-2 text-black bg-white bg-opacity-90">
+    <button onclick="loadAjaxJQ()" class="px-4 py-2 text-black bg-white bg-opacity-90">
       Ajax JQuery!
     </button>
 
