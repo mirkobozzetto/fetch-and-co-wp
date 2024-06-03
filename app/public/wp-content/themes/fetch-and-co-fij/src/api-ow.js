@@ -16,12 +16,15 @@ function populateWeatherInfo() {
       const weather = data.weather[0].description;
       const windDirection = data.wind.deg;
       const windSpeed = data.wind.speed;
+      const icon = data.weather[0].icon;
+      const iconUrl = `http://openweathermap.org/img/wn/${icon}.png`;
 
       $("#city-country").html(`${city}, ${country}`);
       $("#weather-description").html(weather);
       $("#temperature").html(`${temp}°C`);
       $("#wind-direction").html(`NE (${windDirection}°)`);
       $("#wind-speed").html(`(${windSpeed} km/h)`);
+      $("#weather-icon").html(`<img src="${iconUrl}" alt="Weather icon" />`);
     }
   );
 }
