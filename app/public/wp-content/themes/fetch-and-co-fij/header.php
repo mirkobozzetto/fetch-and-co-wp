@@ -7,6 +7,7 @@
   <title>fetch-and-co-fij</title>
   <link href="<?php echo get_stylesheet_directory_uri(); ?>/src/output.css" rel="stylesheet">
   <link href="<?php echo get_stylesheet_directory_uri(); ?>/src/all.min.css" rel="stylesheet">
+  <link href="<?php echo get_stylesheet_directory_uri(); ?>/src/owfont-regular.min.css" rel="stylesheet">
   <?php wp_head(); ?>
 </head>
 
