@@ -1,12 +1,31 @@
-const apiKey = "11cfbee9deadcdf07ef5c0bd56714e2b";
+function populateWeatherInfo() {
+  const apiKey = "11cfbee9deadcdf07ef5c0bd56714e2b";
 
-function ow_api(lat, lon) {
-  const url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric&lang=fr`;
+  $.get(
+    "https://api.openweathermap.org/data/2.5/weather",
+    {
+      appid: apiKey,
+      units: "metric",
+      lang: "fr",
+      q: "Brussels, BE",
+    },
+    function (data, status) {
+      const temp = data.main.temp;
+      const city = data.name;
+      const country = data.sys.country;
+      const weather = data.weather[0].description;
+      const windDirection = data.wind.deg;
+      const windSpeed = data.wind.speed;
 
-  $.get(url, function (data) {
-    console.log(data);
-  });
+      $("#city-country").html(`${city}, ${country}`);
+      $("#weather-description").html(weather);
+      $("#temperature").html(`${temp}°C`);
+      $("#wind-direction").html(`NE (${windDirection}°)`);
+      $("#wind-speed").html(`(${windSpeed} km/h)`);
+    }
+  );
 }
 
-// Appel de la fonction pour obtenir les données météorologiques pour Bruxelles
-ow_api(50.8503, 4.3517);
+$(document).ready(() => {
+  populateWeatherInfo();
+});

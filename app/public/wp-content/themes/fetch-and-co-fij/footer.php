@@ -5,17 +5,18 @@
     <span class="text-2xl text-white">☁︎</span>
   </div>
   <!--  -->
-  <span>Bruxelles, BE</span>
+  <span id="city-country">Bruxelles, BE</span>
   <span>|</span>
-  <span>brume</span>
+  <span id="weather-description">brume</span>
   <span>|</span>
-  <span>2.3°C</span>
+  <span id="temperature">2.3°C</span>
   <span>|</span>
   <span>vent</span>
   <span>↗︎</span>
-  <span>NE (50°)</span>
-  <span>(3.1 km/h)</span>
+  <span id="wind-direction">NE (50°)</span>
+  <span id="wind-speed">(3.1 km/h)</span>
 </footer>
+
 <!-- <script src="<?php echo get_stylesheet_directory_uri(); ?>/src/jQuery 3.7.1 min.js"></script> -->
 <!-- <script src="<?php echo get_stylesheet_directory_uri(); ?>/src/main.js"></script> -->
 <!-- end footer -->
