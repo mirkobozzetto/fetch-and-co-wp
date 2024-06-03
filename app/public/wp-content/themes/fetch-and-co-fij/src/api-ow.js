@@ -21,11 +21,10 @@ function populateWeatherInfo() {
       // const iconUrl = `http://openweathermap.org/img/wn/${icon}.png`;
       const weatherId = data.weather[0].id;
       const iconClass = `owf owf-${weatherId}`;
-      document.getElementById("weather-icon").className = iconClass;
 
+      document.getElementById("weather-icon").className = iconClass;
       document.getElementById("wind-icon-container").style.transform =
         "rotate(" + windDirection + "deg)";
-
       $("#city-country").html(`${city}, ${country}`);
       $("#weather-description").html(weather);
       $("#temperature").html(`${temp}°C`);
