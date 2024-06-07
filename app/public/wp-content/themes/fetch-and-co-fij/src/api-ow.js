@@ -1,11 +1,11 @@
 function degreesToCardinalDirection(degrees) {
   let cardinalDirections = ["N", "NE", "E", "SE", "S", "SW", "W", "NW", "N"];
-  let index = Math.round((degrees % 360) / 45);
+  let index = Math.ceil(((degrees - 22.5) % 360) / 45);
   return cardinalDirections[index];
 }
 
 function populateWeatherInfo() {
-  const apiKey = "11cfbee9deadcdf07ef5c0bd56714e2b";
+  const apiKey = "";
 
   $.get(
     "https://api.openweathermap.org/data/2.5/weather",
@@ -21,10 +21,8 @@ function populateWeatherInfo() {
       const country = data.sys.country;
       const weather = data.weather[0].description;
       const windDirection = data.wind.deg;
-      console.log(data.wind.deg);
+      // console.log(data.wind.deg);
       const windSpeed = data.wind.speed;
-      // const icon = data.weather[0].icon;
-      // const iconUrl = `http://openweathermap.org/img/wn/${icon}.png`;
       const weatherId = data.weather[0].id;
       const iconClass = `owf owf-${weatherId}`;
       const windCardinalDirection = degreesToCardinalDirection(windDirection);
