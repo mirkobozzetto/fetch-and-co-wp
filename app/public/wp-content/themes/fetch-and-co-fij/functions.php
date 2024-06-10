@@ -27,9 +27,13 @@ function mes_js()
         'chemin' => get_stylesheet_directory_uri(),
     )
     );
+
+    wp_register_script('js-cookie', 'https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.5/js.cookie.min.js', array(), null, true);
+
     wp_enqueue_script('jq');
     wp_enqueue_script('main');
     wp_enqueue_script('ow');
+    wp_enqueue_script('js-cookie');
 
 }
 add_action('wp_enqueue_scripts', 'mes_js');

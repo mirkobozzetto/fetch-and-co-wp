@@ -5,43 +5,48 @@ function degreesToCardinalDirection(degrees) {
 }
 
 function populateWeatherInfo() {
-  const apiKey = "";
+  const apiKey = "11cfbee9deadcdf07ef5c0bd56714e2b";
+  let weatherData = Cookies.get("weatherData");
 
-  $.get(
-    "https://api.openweathermap.org/data/2.5/weather",
-    {
-      appid: apiKey,
-      units: "metric",
-      lang: "fr",
-      q: "Brussels, BE",
-    },
-    function (data, status) {
-      const temp = data.main.temp;
-      const city = data.name;
-      const country = data.sys.country;
-      const weather = data.weather[0].description;
-      const windDirection = data.wind.deg;
-      // console.log(data.wind.deg);
-      const windSpeed = data.wind.speed;
-      const weatherId = data.weather[0].id;
-      const iconClass = `owf owf-${weatherId}`;
-      const windCardinalDirection = degreesToCardinalDirection(windDirection);
+  if (weatherData) {
+    weatherData = JSON.parse(weatherData);
+    updateWeatherInfo(weatherData);
+  } else {
+    $.get(
+      "https://api.openweathermap.org/data/2.5/weather",
+      {
+        appid: apiKey,
+        units: "metric",
+        lang: "fr",
+        q: "Brussels, BE",
+      },
+      function (data, _) {
+        Cookies.set("weatherData", JSON.stringify(data), { expires: 1 / 4 });
+        updateWeatherInfo(data);
+      }
+    );
+  }
+}
 
-      document.getElementById("weather-icon").className = iconClass;
-      document.getElementById("wind-icon-container").style.transform =
-        "rotate(" + windDirection + "deg)";
-      $("#city-country").html(`${city}, ${country}`);
-      $("#weather-description").html(weather);
-      $("#temperature").html(`${temp} °C`);
+function updateWeatherInfo(data) {
+  const temp = data.main.temp;
+  const city = data.name;
+  const country = data.sys.country;
+  const weather = data.weather[0].description;
+  const windDirection = data.wind.deg;
+  const windSpeed = data.wind.speed;
+  const weatherId = data.weather[0].id;
+  const iconClass = `owf owf-${weatherId}`;
+  const windCardinalDirection = degreesToCardinalDirection(windDirection);
 
-      // $("#wind-direction").html(`NE (${windDirection}°)`);
-      document.getElementById("wind-direction").innerHTML =
-        windCardinalDirection;
-
-      $("#wind-speed").html(`(${windSpeed} km/h)`);
-      // $("#weather-icon").html(`<img src="${iconUrl}" alt="Weather icon" />`);
-    }
-  );
+  document.getElementById("weather-icon").className = iconClass;
+  document.getElementById("wind-icon-container").style.transform =
+    "rotate(" + windDirection + "deg)";
+  $("#city-country").html(`${city}, ${country}`);
+  $("#weather-description").html(weather);
+  $("#temperature").html(`${temp} °C`);
+  document.getElementById("wind-direction").innerHTML = windCardinalDirection;
+  $("#wind-speed").html(`(${windSpeed} km/h)`);
 }
 
 $(document).ready(() => {
