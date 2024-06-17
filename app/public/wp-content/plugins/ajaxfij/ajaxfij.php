@@ -14,36 +14,29 @@ add_action('wp_ajax_nopriv_ajaxfij_submit', 'ajaxfij'); //action si aucun user l
 
 function ajaxfij()
 {
-
     if ($_POST['type'] == "articles") {
-        // echo get_field('articles', $footerID);
         $args = array(
             'category_name' => 'films',
-            'order'         => 'ASC', //ou DSC
-            'orderby' => 'title',
+            'order'         => 'ASC',
+            'orderby'       => 'title',
             'nopaging'      => true,
         );
 
         $query = new WP_Query($args);
         if ($query->have_posts()) {
+            echo '<div class="space-y-8">';
             while ($query->have_posts()) {
                 $query->the_post();
                 ?>
-
-<h1 class="text-xl pl-8 mt-4">
-  <?php
-echo get_the_title();
-                ?>
-</h1>
-
+<div>
+  <h1 class="text-xl font-bold mb-2"><?php echo get_the_title(); ?></h1>
+  <p class="text-gray-300 mb-12"><?php echo get_the_content(); ?></p>
+</div>
 <?php
 }
-            ;
+            echo '</div>';
         }
-        ;
-
     }
-
     die();
 }
 ?>
