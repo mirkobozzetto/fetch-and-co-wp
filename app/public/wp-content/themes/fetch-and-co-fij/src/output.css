@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.4.3 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.4 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -727,12 +727,21 @@ video {
   clear: none;
 }
 
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .mb-12 {
   margin-bottom: 3rem;
 }
 
 .mt-2 {
   margin-top: 0.5rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
 }
 
 .box-border {
@@ -2006,6 +2015,14 @@ video {
   padding-bottom: 9rem;
 }
 
+.pl-4 {
+  padding-left: 1rem;
+}
+
+.pl-8 {
+  padding-left: 2rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -2075,16 +2092,6 @@ video {
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
-}
-
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
 }
 
 .text-xl {

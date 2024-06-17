@@ -30,7 +30,7 @@ function ajaxfij()
                 $query->the_post();
                 ?>
 
-<h1>
+<h1 class="text-xl pl-8 mt-4">
   <?php
 echo get_the_title();
                 ?>
@@ -54,7 +54,10 @@ function ajaxfij_script_enqueuer()
 {
 // include locate_template('myvars.php');
 
-    wp_register_script("ajaxfij_script", WP_PLUGIN_URL . '/ajaxfij/js/ajaxfij.js', array('jq', 'wayp'));
+    // wp_register_script("ajaxfij_script", WP_PLUGIN_URL . '/ajaxfij/js/ajaxfij.js', array('jq', 'wayp'));
+
+    wp_register_script("ajaxfij_script", plugins_url('/js/ajaxfij.js', __FILE__), array());
+
     wp_localize_script("ajaxfij_script", 'ajaxfijParams', array(
         'ajaxurl' => admin_url('admin-ajax.php'),
 // 'fleche' => get_field('fleche', $footerID)['url'],
